@@ -31,7 +31,9 @@ struct ContentView: View {
             .navigationTitle("Amiibopedia")
         }
         .onAppear {
-            viewModel.getAmiibos()
+            Task {
+                await viewModel.getAmiibos()
+            }
         }
     }
 }
