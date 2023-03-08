@@ -51,8 +51,8 @@
 		BDD6926829B9193F00A7C33E /* Amiibopedia */ = {
 			isa = PBXGroup;
 			children = (
+				BDD6927729B91BE000A7C33E /* Views */,
 				BDD6926929B9193F00A7C33E /* AmiibopediaApp.swift */,
-				BDD6926B29B9193F00A7C33E /* ContentView.swift */,
 				BDD6926D29B9194100A7C33E /* Assets.xcassets */,
 				BDD6926F29B9194100A7C33E /* Preview Content */,
 			);
@@ -65,6 +65,14 @@
 				BDD6927029B9194100A7C33E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BDD6927729B91BE000A7C33E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDD6926B29B9193F00A7C33E /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
