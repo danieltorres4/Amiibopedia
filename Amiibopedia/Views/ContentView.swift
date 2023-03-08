@@ -14,20 +14,16 @@ struct ContentView: View {
         NavigationView {
             Form {
                 ForEach(viewModel.amiibos, id: \.tail) { amiibo in
-                    VStack {
-                        HStack {
-                            AsyncImage(url: URL(string: amiibo.image)!) { image in
-                                image
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .scaledToFit()
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            Text("Name: \(amiibo.name)")
-                                .font(.headline)
-                                .bold()
+                    HStack {
+                        AsyncImage(url: URL(string: amiibo.image)!) { image in
+                            image
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .scaledToFit()
+                        } placeholder: {
+                            ProgressView()
                         }
+                        NavigationLink("\(amiibo.name)", destination: AmiiboDetailView(singleAmiibo: amiibo))
                     }
                     .padding()
                 }
