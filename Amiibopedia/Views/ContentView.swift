@@ -8,14 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel: ViewModel = ViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            Form {
+                ForEach(viewModel.amiibos, id: \.tail) { amiibo in
+                    VStack {
+                        HStack {
+                            AsyncImage(url: URL(string: amiibo.image)!) { image in
+                                image
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                                    .scaledToFit()
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            Text("Name: \(amiibo.name)")
+                                .font(.headline)
+                                .bold()
+                        }
+                    }
+                    .padding()
+                }
+            }
+            .navigationTitle("Amiibopedia")
         }
-        .padding()
+        .onAppear {
+            viewModel.getAmiibos()
+        }
     }
 }
 

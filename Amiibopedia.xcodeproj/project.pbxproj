@@ -11,6 +11,9 @@
 		BDD6926C29B9193F00A7C33E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6926B29B9193F00A7C33E /* ContentView.swift */; };
 		BDD6926E29B9194100A7C33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD6926D29B9194100A7C33E /* Assets.xcassets */; };
 		BDD6927129B9194100A7C33E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD6927029B9194100A7C33E /* Preview Assets.xcassets */; };
+		BDD6927A29B91D1F00A7C33E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6927929B91D1F00A7C33E /* ViewModel.swift */; };
+		BDD6927D29B91E1900A7C33E /* Amiibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6927C29B91E1900A7C33E /* Amiibo.swift */; };
+		BDD6927F29B91F4900A7C33E /* AmiiboResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6927E29B91F4900A7C33E /* AmiiboResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		BDD6926B29B9193F00A7C33E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDD6926D29B9194100A7C33E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD6927029B9194100A7C33E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BDD6927929B91D1F00A7C33E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BDD6927C29B91E1900A7C33E /* Amiibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amiibo.swift; sourceTree = "<group>"; };
+		BDD6927E29B91F4900A7C33E /* AmiiboResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		BDD6926829B9193F00A7C33E /* Amiibopedia */ = {
 			isa = PBXGroup;
 			children = (
+				BDD6927B29B91E0200A7C33E /* Models */,
+				BDD6927829B91D1400A7C33E /* ViewModels */,
 				BDD6927729B91BE000A7C33E /* Views */,
 				BDD6926929B9193F00A7C33E /* AmiibopediaApp.swift */,
 				BDD6926D29B9194100A7C33E /* Assets.xcassets */,
@@ -73,6 +81,23 @@
 				BDD6926B29B9193F00A7C33E /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BDD6927829B91D1400A7C33E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BDD6927929B91D1F00A7C33E /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BDD6927B29B91E0200A7C33E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDD6927C29B91E1900A7C33E /* Amiibo.swift */,
+				BDD6927E29B91F4900A7C33E /* AmiiboResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD6927D29B91E1900A7C33E /* Amiibo.swift in Sources */,
+				BDD6927F29B91F4900A7C33E /* AmiiboResponse.swift in Sources */,
 				BDD6926C29B9193F00A7C33E /* ContentView.swift in Sources */,
+				BDD6927A29B91D1F00A7C33E /* ViewModel.swift in Sources */,
 				BDD6926A29B9193F00A7C33E /* AmiibopediaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
