@@ -11,8 +11,8 @@ final class ViewModel: ObservableObject {
     @Published var amiibos: [Amiibo] = []
     
     /// Logic of every query
-    func getAmiibos() async {
-        let url = URL(string: "https://www.amiiboapi.com/api/amiibo/")!
+    func getAllAmiibos() async {
+        guard let url = URL(string: "https://www.amiiboapi.com/api/amiibo/") else { return }
         
         let (data, _) = try! await URLSession.shared.data(from: url)
         /// Extracting the data to map it into AmiiboResponse model
@@ -20,6 +20,18 @@ final class ViewModel: ObservableObject {
         
         DispatchQueue.main.async {
             /// everytime a query be done, amiibos property will be updated and the property will "redraw" the view
+            self.amiibos = amiiboModel.amiibos
+        }
+    }
+    
+    ///
+    func getAmiibo(character: String) async {
+        guard let url = URL(string: "https://www.amiiboapi.com/api/amiibo/?character=\(character)") else { return }
+        let (data, _) = try! await URLSession.shared.data(from: url)
+        
+        let amiiboModel = try! JSONDecoder().decode(AmiiboResponse.self, from: data)
+        
+        DispatchQueue.main.async {
             self.amiibos = amiiboModel.amiibos
         }
     }
